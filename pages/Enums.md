@@ -29,9 +29,10 @@ An enum member is considered constant if:
     * parenthesized constant enum expression
     * `+`, `-`, `~` unary operators applied to constant enum expression
     * `+`, `-`, `*`, `/`, `%`, `<<`, `>>`, `>>>`, `&`, `|`, `^` binary operators with constant enum expressions as operands
+    
     It is a compile time error for constant enum expressions to be evaluated to `NaN` or `Infinity`.
 
-In all other cases enum member is considered computed.
+In all other cases the enum member is considered computed.
 
 ```ts
 enum FileAccess {
@@ -115,4 +116,4 @@ declare enum Enum {
 ```
 
 One important difference between ambient and non-ambient enums is that, in regular enums, members that don't have an initializer are considered constant members.
-For non-const ambient enums member that does not have initializer is considered computed.
+For non-const ambient enums, a member that does not have an initializer is considered computed.
